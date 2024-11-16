@@ -1,0 +1,14 @@
+general.import = [
+    "~/.config/alacritty/themes/themes/one-dark.toml"
+]
+
+[font]
+normal = { family = "monospace", style = "Regular"}
+size = 13
+
+[window]
+padding = {x = 8, y = 6}
+opacity = 1.0
+
+[terminal.shell]
+program = "/usr/bin/fish"

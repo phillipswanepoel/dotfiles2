@@ -89,7 +89,7 @@ _open_files_for_editing() {
 
 # Created by `pipx` on 2023-07-29 09:41:15
 export PATH="$HOME/.local/bin:$PATH"
-export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
+#export LOCALE_ARCHIVE="$(nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive"
 export FZF_DEFAULT_OPTS="--bind 'enter:become(vim {})'"
 
 # lol just jokign we are launching fish instead

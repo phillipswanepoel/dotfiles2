@@ -8,7 +8,7 @@
 
 * {
     border: none;
-    font-family: "Font Awesome", Monospace, sans-serif;
+    font-family: "Font Awesome", "Monospace", sans-serif;
     font-size: 13px;
     color: @fg;
     border-radius: 0px;

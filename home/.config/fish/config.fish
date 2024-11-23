@@ -24,3 +24,4 @@ bind \e\[F end-of-line
 set -Ux GDK_BACKEND wayland
 set -Ux QT_QPA_PLATFORM wayland
 set -Ux XDG_CURRENT_DESKTOP sway
+set -Ux MOZ_ENABLE_WAYLAND 1

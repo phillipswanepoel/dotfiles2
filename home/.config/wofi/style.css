@@ -1,0 +1,70 @@
+@define-color bg rgba(40, 44, 52, 0.7);
+@define-color fg rgba(171, 178, 191, 0.7);
+@define-color blue rgba(97, 175, 239, 0.7);
+@define-color magenta rgba(198, 120, 221, 0.7);
+@define-color cyan rgba(86, 182, 194, 0.7);
+@define-color red rgba(224, 108, 117, 0.7);
+@define-color black rgba(0, 0, 0, 0.5);
+
+window {
+    font-size: 15px;
+    font-family: "Noto Mono";
+    color: @fg;
+    background-color: @black;
+}
+
+
+#entry{
+    margin: 7px 7px;
+    padding-left: 30px;
+}
+
+
+#entry:selected {
+    /* background-color: rgba(187,204,221,0.5); */
+    background: linear-gradient(45deg, @blue 0%, @magenta 60%);
+    color: @fg;
+    border-radius: 0px;
+    outline-style: none;
+}
+
+
+#expander-box {
+    background: transparent;
+    color: #333333;
+}
+
+
+#text:selected {
+    color: #333333;
+}
+
+
+#input{
+    background-color: @bg; 
+    border-radius: 0px;
+    font-size: 20px;
+    font-weight: 500;
+    color: @fg;
+    padding: 5px;
+    box-shadow: none; 
+    border: none;
+}
+
+
+#input:focus{
+    color: rgb(200,200,200);
+}
+
+
+#img{
+    padding-right:10px;
+}
+
+
+#outer-box{
+    box-shadow: none;
+    border-radius: 0px;
+    padding-bottom: 15px;
+    transition: 0.5s ease-in-out;
+}

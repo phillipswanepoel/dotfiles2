@@ -14,6 +14,7 @@ filetype indent on
 set nobackup
 set scrolloff=10
 set nowrap
+set autoindent
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu

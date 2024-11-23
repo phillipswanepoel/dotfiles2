@@ -20,3 +20,7 @@ bind \e\[H beginning-of-line
 bind \e\[4~ end-of-line
 bind \e\[F end-of-line
 
+# GTK stuff for pavucontrol
+set -Ux GDK_BACKEND wayland
+set -Ux QT_QPA_PLATFORM wayland
+set -Ux XDG_CURRENT_DESKTOP sway

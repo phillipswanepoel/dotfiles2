@@ -1,76 +1,89 @@
+/*----- Define custom colors -----*/
+@define-color bg #282C34;
+@define-color fg #ABB2BF;
+@define-color blue #61AFEF;
+@define-color magenta #C678DD;
+@define-color cyan #56B6C2;
+@define-color red #E06C75;
+
 * {
-	font-size: 16px;
-	font-family: monospace;
+    border: none;
+    font-family: "Font Awesome", Monospace, sans-serif;
+    font-size: 13px;
+    color: @fg;
+    border-radius: 0px;
 }
 
+window {
+	/*font-weight: bold;*/
+}
 window#waybar {
-	background: #282c34;
-	color: #fdf6e3;
+    background: @bg;
 }
-
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #1a1a1a;
+/*-----module groups----*/
+.modules-right {
+	background-color: @bg;
+    margin: 2px 0px 0 0;
 }
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
+.modules-left {
+    margin: 2px 0px 0 0;
+	background-color: @bg;
 }
-
-#workspaces,
-#clock.1,
-#clock.2,
-#clock.3,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk,
-#tray {
-	background: #1a1a1a;
-    padding-right: 5px;
-}
-
+/*-----modules indv----*/
 #workspaces button {
-	padding: 0 2px;
-	color: #fdf6e3;
+    padding: 1px 5px;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+	background-color: rgba(0,153,153,1);
 }
 #workspaces button.focused {
-	color: #268bd2;
-}
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-}
-#workspaces button:hover {
-	background: #1a1a1a;
-	border: #1a1a1a;
-	padding: 0 3px;
+    border-bottom: 2px solid @blue; /* Adjust thickness and color */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent; /* Keep the background transparent */
 }
 
-#pulseaudio {
-	color: #268bd2;
-}
-#memory {
-	color: #2aa198;
-}
-#cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
-}
-#disk {
-	color: #b58900;
-}
 
 #clock,
-#pulseaudio,
-#memory,
-#cpu,
 #battery,
-#disk {
-	padding: 0 10px;
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#bluetooth,
+#custom-media,
+#tray,
+#mode,
+#custom-power,
+#custom-menu,
+#idle_inhibitor {
+    padding: 0 10px;
 }
-
+#mode {
+    color: #cc3436;
+    font-weight: bold;
+}
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+    color: #2dcc36;
+}
+#pulseaudio.muted {
+    color: #cc3436;
+}
+#battery.charging {
+    color: #2dcc36;
+}
+#battery.warning:not(.charging) {
+	color: #e6e600;
+}
+#battery.critical:not(.charging) {
+    color: #cc3436;
+}
+#temperature.critical {
+    color: #cc3436;
+}

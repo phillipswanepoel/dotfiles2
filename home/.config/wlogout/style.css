@@ -1,0 +1,62 @@
+/*----- Define custom colors -----*/
+@define-color bg #282C34;
+@define-color fg #ABB2BF;
+@define-color blue #61AFEF;
+@define-color magenta #C678DD;
+@define-color cyan #56B6C2;
+@define-color red #E06C75;
+@define-color blueb #61AFEF;
+@define-color magentab #C678DD;
+@define-color cyanb #56B6C2;
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(12, 12, 12, 0.9);
+}
+
+button {
+    border-radius: 0;
+    border-color: @blue;
+    color: @fg;
+	background-color: @bg;
+	border-style: solid;
+	border-width: 1px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+}
+
+button:hover {
+	/*background-color: @fg;*/
+    color: @fg;
+    background-color: rgba(97, 175, 239, 0.5);
+	outline-style: none;
+}
+
+#lock {
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/lock.svg"));
+}
+
+#logout {
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/logout.svg"));
+}
+
+#suspend {
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/moon.svg"));
+}
+
+#hibernate {
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/moon+.svg"));
+}
+
+#shutdown{
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/power.svg"));
+}
+
+#reboot{
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/restart.svg"));
+}

@@ -226,9 +226,6 @@ bindsym $mod+r mode "resize"
 #starting apps
 exec dunst
 exec firefox
-#setting wallpaper
-#exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/1.webp
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #display settings
 # Configure the built-in display (eDP-1)
@@ -278,3 +275,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
+#setting wallpaper
+exec swaybg -i ~/Pictures/convert_walls/output.png
+#exec --no-startup-id feh --bg-scale ~/Pictures/convert_walls/output.png
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh

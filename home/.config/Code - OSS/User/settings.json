@@ -1,0 +1,37 @@
+{
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "godot_tools.editor_path": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
+    "godot_tools.scene_file_config": "/home/phillips/Godot4/Projects/Turret-Defense/Scripts&Scenes/BattleEncounters/Level.tscn",
+    "editor.guides.highlightActiveIndentation": false,
+    "godot_tools.gdscript_lsp_server_port": 6005,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "workbench.colorTheme": "Breeze Dark",
+    "vim.vimrc.enable": true,
+    "gopls": {
+
+    },
+    "extensions.ignoreRecommendations": true,
+    "godotTools.editorPath.godot4": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
+    "godotTools.editorPath.godot3": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
+    "godotTools.lsp.serverPort": 6005,
+    "vim.smartRelativeLine": true,
+    "editor.lineNumbers": "relative",
+    "editor.quickSuggestionsDelay": 0,
+    "editor.lightbulb.enabled": "off",
+    "continue.enableTabAutocomplete": true,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontSize": 16,
+    "editor.fontFamily": "JetBrains Mono, 'Droid Sans Mono', 'monospace', monospace",
+    "window.autoDetectHighContrast": false,
+    "workbench.preferredDarkColorTheme": "One Dark Pro",
+    "workbench.preferredLightColorTheme": "One Dark Pro",
+    "workbench.preferredHighContrastLightColorTheme": "One Dark Pro",
+    "workbench.preferredHighContrastColorTheme": "One Dark Pro",
+    "window.autoDetectColorScheme": true,
+    "window.titleBarStyle": "custom",
+    "editor.minimap.enabled": false
+}

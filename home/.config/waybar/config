@@ -4,8 +4,8 @@
     "modules-right": ["pulseaudio", "custom/pipe1", 
                       "bluetooth", "custom/pipe1", 
                       "tray", "custom/pipe1", 
-                      "clock", "custom/pipe1", 
                       "battery", "custom/pipe1", 
+                      "clock", "custom/pipe1", 
                       "custom/power"],
 
     "sway/mode": {
@@ -60,7 +60,7 @@
         "format": "{icon} {capacity}%",
         "format-icons": [" ", " ", " ", " ", " "],
         "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span> charged",
         "interval": 30,
         "states": {
             "warning": 25,

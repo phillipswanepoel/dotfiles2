@@ -1,4 +1,16 @@
 {
+    "editor.tokenColorCustomizations": {
+        "[One Dark Pro]": { // Adjust this to match your theme name
+            "textMateRules": [
+                {
+                    "scope": "variable.other.readwrite", // Replace with the scope from the inspector
+                    "settings": {
+                        "foreground": "#abb2bf" // Replace with your desired color
+                    }
+                }
+            ]
+        }
+    },
     "[python]": {
         "editor.formatOnType": true
     },
@@ -9,11 +21,8 @@
     "godot_tools.gdscript_lsp_server_port": 6005,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-    "workbench.colorTheme": "Breeze Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "vim.vimrc.enable": true,
-    "gopls": {
-
-    },
     "extensions.ignoreRecommendations": true,
     "godotTools.editorPath.godot4": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
     "godotTools.editorPath.godot3": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
@@ -22,16 +31,36 @@
     "editor.lineNumbers": "relative",
     "editor.quickSuggestionsDelay": 0,
     "editor.lightbulb.enabled": "off",
-    "continue.enableTabAutocomplete": true,
+    "continue.enableTabAutocomplete": false,
     "explorer.confirmDelete": false,
     "terminal.integrated.fontSize": 16,
     "editor.fontFamily": "JetBrains Mono, 'Droid Sans Mono', 'monospace', monospace",
     "window.autoDetectHighContrast": false,
-    "workbench.preferredDarkColorTheme": "One Dark Pro",
     "workbench.preferredLightColorTheme": "One Dark Pro",
     "workbench.preferredHighContrastLightColorTheme": "One Dark Pro",
     "workbench.preferredHighContrastColorTheme": "One Dark Pro",
     "window.autoDetectColorScheme": true,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 18,
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+
+    // we try to make semantic highlighting look good
+    "editor.semanticHighlighting.enabled": true,
+    // prevent VSCode from modifying the terminal colors
+    "terminal.integrated.minimumContrastRatio": 1,
+    // make the window's titlebar use the workbench colors
     "window.titleBarStyle": "custom",
-    "editor.minimap.enabled": false
+
+    // applicable if you use Go, this is an opt-in flag!
+    "gopls": {
+      "ui.semanticTokens": true,
+    },
+    "catppuccin.italicKeywords": false,
+    "catppuccin.boldKeywords": true,
+    "[ocaml]": {
+        "editor.inlayHints.enabled": "off",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    }
 }

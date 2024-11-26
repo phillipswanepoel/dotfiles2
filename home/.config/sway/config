@@ -279,3 +279,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 exec swaybg -i ~/Pictures/convert_walls/output.png
 #exec --no-startup-id feh --bg-scale ~/Pictures/convert_walls/output.png
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+assign [class="steam"] workspace 5
+assign [app_id="Alacritty"] workspace 2
+assign [app_id="firefox"] workspace 1
+assign [app_id="code-oss"] workspace 3
+

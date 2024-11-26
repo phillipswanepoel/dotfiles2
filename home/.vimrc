@@ -1,20 +1,35 @@
+" Formatting
 set nocompatible
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
+
+" Line numbers
+set number
+set cursorline
+highlight LineNr ctermfg=grey
+highlight CursorLineNr ctermfg=yellow cterm=NONE
+highlight CursorLine cterm=NONE gui=NONE ctermbg=NONE guibg=NONE
+set relativenumber 
+
+" Syntax
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
+" Remapping 
 inoremap jk <Esc>
 inoremap kj <Esc>
 nnoremap o o<esc>
 nnoremap n nzz
+
+" Font and stuff
 set guifont=JetBrains\ Mono\ Nerd\ Font:h11
-filetype on
-filetype plugin on
-filetype indent on
 set nobackup
 set scrolloff=10
 set nowrap
-set autoindent
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu

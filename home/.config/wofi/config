@@ -1,4 +1,4 @@
-width=60%
+width=40%
 lines=11
 
 hide_scroll = true
@@ -9,4 +9,4 @@ normal_window = false
 
 matching=fuzzy
 insensitive=true
-columns=2
+columns=1

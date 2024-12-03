@@ -3,8 +3,8 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": ["pulseaudio", "custom/pipe1", 
                       "bluetooth", "custom/pipe1", 
-                      "tray", "custom/pipe1", 
                       "battery", "custom/pipe1", 
+                      "tray", "custom/pipe1", 
                       "clock", "custom/pipe1", 
                       "custom/power"],
 

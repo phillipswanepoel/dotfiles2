@@ -30,6 +30,8 @@ set guifont=JetBrains\ Mono\ Nerd\ Font:h11
 set nobackup
 set scrolloff=10
 set nowrap
+set ignorecase
+set smartcase
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu

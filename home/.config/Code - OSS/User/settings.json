@@ -62,5 +62,6 @@
         "editor.inlayHints.enabled": "off",
         "editor.tabSize": 2,
         "editor.insertSpaces": true
-    }
+    },
+    "explorer.confirmDragAndDrop": false
 }

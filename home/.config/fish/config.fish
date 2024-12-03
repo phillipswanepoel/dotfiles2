@@ -8,6 +8,7 @@ set -U fish_greeting
 # Add paths using fish_add_path
 fish_add_path -U "$HOME/.local/bin"
 set -Ux fish_user_paths $fish_user_paths ~/.local/bin
+set -Ux fish_user_paths $HOME/go/bin $fish_user_paths
 
 # Set environment variables using set -x
 set -x FZF_DEFAULT_OPTS "--bind 'enter:become(vim {})'"

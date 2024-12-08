@@ -41,7 +41,7 @@
     "workbench.preferredHighContrastColorTheme": "One Dark Pro",
     "window.autoDetectColorScheme": true,
     "editor.minimap.enabled": false,
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "terminal.integrated.defaultProfile.linux": "fish",
     "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
 
@@ -63,5 +63,14 @@
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [
+        80
+    ],
+    //"editor.wordWrapColumn": 80,
+    //"editor.wordWrap": "wordWrapColumn",
+    "window.zoomLevel": 0.5,
+    "files.associations": {
+        "*.tpl": "html"
+    }
 }

@@ -31,9 +31,8 @@
     "editor.lineNumbers": "relative",
     "editor.quickSuggestionsDelay": 0,
     "editor.lightbulb.enabled": "off",
-    "continue.enableTabAutocomplete": false,
+    "continue.enableTabAutocomplete": true,
     "explorer.confirmDelete": false,
-    "terminal.integrated.fontSize": 16,
     "editor.fontFamily": "JetBrains Mono, 'Droid Sans Mono', 'monospace', monospace",
     "window.autoDetectHighContrast": false,
     "workbench.preferredLightColorTheme": "One Dark Pro",
@@ -41,7 +40,6 @@
     "workbench.preferredHighContrastColorTheme": "One Dark Pro",
     "window.autoDetectColorScheme": true,
     "editor.minimap.enabled": false,
-    "editor.fontSize": 16,
     "terminal.integrated.defaultProfile.linux": "fish",
     "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
 
@@ -72,5 +70,6 @@
     "window.zoomLevel": 0.5,
     "files.associations": {
         "*.tpl": "html"
-    }
+    },
+    "editor.fontSize": 18
 }

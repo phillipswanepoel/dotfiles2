@@ -71,5 +71,8 @@
     "files.associations": {
         "*.tpl": "html"
     },
-    "editor.fontSize": 18
+    "editor.fontSize": 18,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on"
 }

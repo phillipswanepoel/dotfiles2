@@ -79,12 +79,14 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 #set $menu wofi --show drun
-#bindsym $mod+d exec env PATH="$HOME/.local/bin:$PATH" rofi -show run
+#bindsym $mod+p exec env PATH="$HOME/.local/bin:$PATH" rofi -show run
 #bindsym $mod+d exec env PATH="$HOME/.local/bin:$PATH" dmenu_run
 bindsym $mod+d exec env PATH="$HOME/.local/bin:$PATH" wofi --show drun
+bindsym $mod+p exec env PATH="$HOME/.local/bin:$PATH" wofi --show run
+#bindsym $mod+n exec ~/start-neovide.sh
+bindsym $mod+n exec fish -c "test -r '/home/phillips/.opam/opam-init/init.fish' && source '/home/phillips/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; neovide"
 #start firefox
 bindsym $mod+b exec firefox
-
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -246,10 +248,9 @@ workspace 7 output eDP-1
 
 
 assign [app_id="firefox"] workspace 1
-assign [app_id="code-oss"] workspace 2
-assign [class="steam"] workspace 3
+assign [app_id="code-oss"] workspace 3
+assign [class="steam"] workspace 2
 assign [class="vesktop"] workspace 6
-
 
 input "2362:597:UNIW0001:00_093A:0255_Touchpad" {
     dwt enabled
@@ -267,10 +268,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # Setting wallpaper
 exec swaybg -i ~/Pictures/convert_walls/output.png
-
-# Screen sharing stuff?
-exec /usr/lib/xdg-desktop-portal &
-exec /usr/lib/xdg-desktop-portal-wlr &
 
 # Hide cursor afk
 seat * hide_cursor 8000
@@ -295,7 +292,14 @@ output DP-2 {
 }
 
 input * {
-    repeat_rate 65
+    repeat_rate 100
     repeat_delay 200
 }
 
+# Screenshare stuff
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id xdg-desktop-portal &
+exec --no-startup-id xdg-desktop-portal-wlr &
+
+include /etc/sway/config.d/*

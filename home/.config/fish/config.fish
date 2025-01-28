@@ -2,6 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# source secrets
+if test -f ~/.config/fish/secret_env.fish
+    source ~/.config/fish/secret_env.fish
+end
+
 #variables
 set -U fish_greeting
 
@@ -33,7 +38,8 @@ set -Ux MOZ_ENABLE_WAYLAND 1
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-test -r '/home/phillips/.opam/opam-init/init.fish' && source '/home/phillips/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+#test -r '/home/phillips/.opam/opam-init/init.fish' && source '/home/phillips/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+test -r '/home/phillips/.opam/opam-init/init.fish'; and source '/home/phillips/.opam/opam-init/init.fish' >/dev/null 2>/dev/null
 # END opam configuration
 
 # The next line updates PATH for the Google Cloud SDK.

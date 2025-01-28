@@ -84,7 +84,8 @@ bindsym $mod+q kill
 bindsym $mod+d exec env PATH="$HOME/.local/bin:$PATH" wofi --show drun
 bindsym $mod+p exec env PATH="$HOME/.local/bin:$PATH" wofi --show run
 #bindsym $mod+n exec ~/start-neovide.sh
-bindsym $mod+n exec fish -c "test -r '/home/phillips/.opam/opam-init/init.fish' && source '/home/phillips/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; neovide"
+#bindsym $mod+n exec fish -c "test -r '/home/phillips/.opam/opam-init/init.fish' && source '/home/phillips/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; neovide"
+bindsym $mod+n exec fish -l -c "neovide"
 #start firefox
 bindsym $mod+b exec firefox
 
@@ -292,7 +293,7 @@ output DP-2 {
 }
 
 input * {
-    repeat_rate 100
+    repeat_rate 80
     repeat_delay 200
 }
 

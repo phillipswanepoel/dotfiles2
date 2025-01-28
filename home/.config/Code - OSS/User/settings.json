@@ -12,8 +12,13 @@
         }
     },
     "[python]": {
-        "editor.formatOnType": true
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
     },
+    "flake8.args": [
+        "--max-line-length=88",
+        "--ignore=F401",
+    ],
     "editor.inlineSuggest.enabled": true,
     "godot_tools.editor_path": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
     "godot_tools.scene_file_config": "/home/phillips/Godot4/Projects/Turret-Defense/Scripts&Scenes/BattleEncounters/Level.tscn",
@@ -31,7 +36,7 @@
     "editor.lineNumbers": "relative",
     "editor.quickSuggestionsDelay": 0,
     "editor.lightbulb.enabled": "off",
-    "continue.enableTabAutocomplete": true,
+    "continue.enableTabAutocomplete": false,
     "explorer.confirmDelete": false,
     "editor.fontFamily": "JetBrains Mono, 'Droid Sans Mono', 'monospace', monospace",
     "window.autoDetectHighContrast": false,
@@ -41,7 +46,7 @@
     "window.autoDetectColorScheme": true,
     "editor.minimap.enabled": false,
     "terminal.integrated.defaultProfile.linux": "fish",
-    "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+    "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
 
     // we try to make semantic highlighting look good
     "editor.semanticHighlighting.enabled": true,
@@ -63,7 +68,7 @@
     },
     "explorer.confirmDragAndDrop": false,
     "editor.rulers": [
-        80
+        88
     ],
     //"editor.wordWrapColumn": 80,
     //"editor.wordWrap": "wordWrapColumn",
@@ -71,7 +76,6 @@
     "files.associations": {
         "*.tpl": "html"
     },
-    "editor.fontSize": 18,
     "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": "on"

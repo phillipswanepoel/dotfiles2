@@ -17,7 +17,7 @@
     },
     "flake8.args": [
         "--max-line-length=88",
-        "--ignore=F401",
+        "--ignore=F401,E721",
     ],
     "editor.inlineSuggest.enabled": true,
     "godot_tools.editor_path": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
@@ -38,7 +38,9 @@
     "editor.lightbulb.enabled": "off",
     "continue.enableTabAutocomplete": false,
     "explorer.confirmDelete": false,
-    "editor.fontFamily": "JetBrains Mono, 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "fira code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "450",
     "window.autoDetectHighContrast": false,
     "workbench.preferredLightColorTheme": "One Dark Pro",
     "workbench.preferredHighContrastLightColorTheme": "One Dark Pro",
@@ -46,7 +48,7 @@
     "window.autoDetectColorScheme": true,
     "editor.minimap.enabled": false,
     "terminal.integrated.defaultProfile.linux": "fish",
-    "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
+    "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
 
     // we try to make semantic highlighting look good
     "editor.semanticHighlighting.enabled": true,
@@ -78,5 +80,7 @@
     },
     "editor.smoothScrolling": true,
     "terminal.integrated.smoothScrolling": true,
-    "editor.cursorSmoothCaretAnimation": "on"
+    "editor.cursorSmoothCaretAnimation": "on",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontSize": 16,
 }

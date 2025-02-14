@@ -32,6 +32,10 @@ set -Ux QT_QPA_PLATFORM wayland
 set -Ux XDG_CURRENT_DESKTOP sway
 set -Ux MOZ_ENABLE_WAYLAND 1
 
+# STMweb dev
+set -Ux STMWEB_DIR /home/phillips/Busii/stmweb/stmweb6/
+set -Ux STMWEB_PORT 8080
+
 
 # BEGIN opam configuration
 # This is useful if you're using opam as it adds:

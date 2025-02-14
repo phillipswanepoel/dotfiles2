@@ -11,6 +11,7 @@ return {
   },
   opts = {
     log_level = "DEBUG",
+    workspace_root_dirs = { ".git" },
     strategies = {
       chat = {
         adapter = "openrouter",
@@ -20,8 +21,8 @@ return {
       -- Additional strategy for quick/simple queries
       quick = {
         adapter = "openrouter",
-        model = "google/gemini-flash-1.5",
-        system_message = "You are a helpful AI coding assistant. Be concise and direct.",
+        --model = "google/gemini-flash-1.5",
+        --system_message = "You are a helpful AI coding assistant. Be concise and direct.",
       },
     },
     adapters = {
@@ -34,10 +35,11 @@ return {
           name = "Openrouter",
           schema = {
             model = {
-              default = "anthropic/claude-3.5-sonnet",
+              --default = "anthropic/claude-3.5-sonnet",
               --default = "deepseek/deepseek-chat",
               --default = "deepseek/deepseek-r1",
-              --quick = "google/gemini-flash-1.5",
+              default = "google/gemini-2.0-flash-001",
+              --default = "google/gemini-2.0-flash-thinking-exp:free",
             },
           },
           headers = {

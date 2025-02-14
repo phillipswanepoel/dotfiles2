@@ -11,6 +11,8 @@ vim.opt.autoindent = false
 -- Break lines at word boundaries
 vim.opt.wrap = true
 vim.opt.linebreak = true
+-- Make _ count as word boundary
+--vim.opt.iskeyword:remove("_")
 
 vim.opt.shell = "/usr/bin/fish"
 
@@ -34,5 +36,18 @@ vim.o.guifont = "FiraCode Nerd Font:h13"
 --     normal
 --     slight
 --     none
+
+-- GODOT OPTIONS
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd("FileType", {
+  pattern = "gdscript", -- Godot script filetype
+  callback = function()
+    vim.bo.expandtab = false
+    vim.bo.tabstop = 2
+    vim.bo.shiftwidth = 2
+    vim.bo.softtabstop = 2
+  end,
+})
 
 require("config.fonts")

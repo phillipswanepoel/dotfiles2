@@ -11,6 +11,24 @@
 
 set $mod Mod1
 
+# Moving workspaces tmux style
+mode "workspace" {
+    # n switches to next workspace and returns to default mode
+    bindsym n workspace next; mode "default"
+
+    # p switches to previous workspace and returns to default mode
+    bindsym p workspace prev; mode "default"
+
+    # Additional escape options
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym grave mode "default"
+}
+
+# Use ~ (grave) to enter workspace mode
+#bindsym grave mode "workspace"
+
+
 # Border styles
 for_window [class="^.*"] border pixel 1
 hide_edge_borders smart
@@ -249,9 +267,9 @@ workspace 7 output eDP-1
 
 
 assign [app_id="firefox"] workspace 1
-assign [app_id="code-oss"] workspace 3
-assign [class="steam"] workspace 2
-assign [class="vesktop"] workspace 6
+# assign [app_id="code-oss"] workspace 2
+assign [class="steam"] workspace 3
+assign [class="vesktop"] workspace 5
 
 input "2362:597:UNIW0001:00_093A:0255_Touchpad" {
     dwt enabled
@@ -268,7 +286,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # Setting wallpaper
-exec swaybg -i ~/Pictures/convert_walls/output.png
+exec_always swaybg -i ~/Pictures/gowall/a_colorful_sky_with_clouds.png
 
 # Hide cursor afk
 seat * hide_cursor 8000
@@ -304,3 +322,5 @@ exec --no-startup-id xdg-desktop-portal &
 exec --no-startup-id xdg-desktop-portal-wlr &
 
 include /etc/sway/config.d/*
+
+

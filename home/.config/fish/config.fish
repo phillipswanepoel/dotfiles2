@@ -31,9 +31,11 @@ set -Ux GDK_BACKEND wayland
 set -Ux QT_QPA_PLATFORM wayland
 set -Ux XDG_CURRENT_DESKTOP sway
 set -Ux MOZ_ENABLE_WAYLAND 1
+# Wayland and electron
+set -Ux ELECTRON_OZONE_PLATFORM_HINT wayland
 
 # STMweb dev
-set -Ux STMWEB_DIR /home/phillips/Busii/stmweb/stmweb6/
+set -Ux STMWEB_DIR /home/phillips/Busii/stmweb/stmweb_python_2/
 set -Ux STMWEB_PORT 8080
 
 

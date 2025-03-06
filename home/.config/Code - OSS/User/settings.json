@@ -12,9 +12,12 @@
         }
     },
     "[python]": {
-        "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
     },
+    "black-formatter.args": [
+        "--line-length", "88"
+    ],
     "flake8.args": [
         "--max-line-length=88",
         "--ignore=F401,E721",
@@ -72,7 +75,7 @@
     "editor.rulers": [
         88
     ],
-    //"editor.wordWrapColumn": 80,
+    //"editor.wordWrapColumn": 88,
     //"editor.wordWrap": "wordWrapColumn",
     "window.zoomLevel": 0.5,
     "files.associations": {
@@ -83,4 +86,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "terminal.integrated.fontFamily": "monospace",
     "editor.fontSize": 16,
+    "geminicodeassist.project": "",
+    "editor.cursorStyle": "line-thin",
+    "diffEditor.codeLens": true,
 }

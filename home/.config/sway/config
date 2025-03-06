@@ -297,21 +297,31 @@ output eDP-1 {
     resolution 2560x1600@120Hz
     scale 2
     position 0,0
-    adaptive_sync on
+    adaptive_sync off
     enable
 }
 
 # Configure the external display (DP-2)
 output DP-2 {
-    resolution 2560x1440@165Hz
+    resolution 2560x1440@120Hz
     scale 1
     position 1280,0
-    adaptive_sync on
+    adaptive_sync off
     enable
 }
 
+# output HDMI-A-1 {
+#     resolution 1920x1080@60Hz
+#     scale 1
+#     position 1280,0
+#     adaptive_sync off
+#     enable
+# }
+# Set main display for xwayland apps
+exec xrandr --output DP-2 --primary
+
 input * {
-    repeat_rate 80
+    repeat_rate 60
     repeat_delay 200
 }
 
@@ -320,6 +330,10 @@ exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLA
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec --no-startup-id xdg-desktop-portal &
 exec --no-startup-id xdg-desktop-portal-wlr &
+
+# Screenshot
+bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
+
 
 include /etc/sway/config.d/*
 

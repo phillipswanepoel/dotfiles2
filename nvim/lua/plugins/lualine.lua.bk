@@ -1,0 +1,106 @@
+return {
+  "nvim-lualine/lualine.nvim",
+  event = "VeryLazy",
+  config = function()
+    local custom_theme = require("lualine.themes.auto")
+
+    -- Make all sections transparent with blue text color
+    for _, section in pairs(custom_theme.normal) do
+      section.bg = "NONE"
+      section.fg = "#61afef"
+    end
+    for _, section in pairs(custom_theme.insert) do
+      section.bg = "NONE"
+      section.fg = "#61afef"
+    end
+    for _, section in pairs(custom_theme.visual) do
+      section.bg = "NONE"
+      section.fg = "#61afef"
+    end
+    for _, section in pairs(custom_theme.replace) do
+      section.bg = "NONE"
+      section.fg = "#61afef"
+    end
+    for _, section in pairs(custom_theme.command) do
+      section.bg = "NONE"
+      section.fg = "#61afef"
+    end
+    for _, section in pairs(custom_theme.inactive) do
+      section.bg = "NONE"
+      section.fg = "#61afef"
+    end
+
+    require("lualine").setup({
+      options = {
+        theme = custom_theme,
+        component_separators = "",
+        section_separators = "",
+        globalstatus = false,
+      },
+      sections = {
+        lualine_a = {
+          {
+            function()
+              local mode = vim.fn.mode()
+              if mode == "n" then
+                return ""
+              else
+                return vim.fn.mode()
+              end
+            end,
+          },
+        },
+        lualine_b = {
+          {
+            function()
+              -- Show macro recording
+              local recording = vim.fn.reg_recording()
+              if recording ~= "" then
+                return "recording @" .. recording
+              end
+              return ""
+            end,
+            color = { fg = "#e06c75" },
+          },
+        },
+        lualine_c = {
+          {
+            function()
+              -- Show search pattern
+              local search = vim.fn.getreg("/")
+              if search ~= "" and vim.v.hlsearch == 1 then
+                return "/" .. search
+              end
+              return ""
+            end,
+            color = { fg = "#98c379" },
+          },
+        },
+        lualine_x = {
+          {
+            function()
+              -- Show file info only when relevant
+              local filename = vim.fn.expand("%:t")
+              if filename == "" then
+                return ""
+              end
+              local modified = vim.bo.modified and "●" or ""
+              return filename .. modified
+            end,
+          },
+        },
+        lualine_y = {},
+        lualine_z = {},
+      },
+      inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {},
+      },
+      extensions = {},
+    })
+  end,
+}

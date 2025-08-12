@@ -3,8 +3,20 @@ return {
   lazy = false,
   config = function()
     require("themery").setup({
-      themes = {},
-      -- add the config here
+      themes = {
+        "tokyonight",
+        "onedarkpro",
+        "catppuccin",
+        "gruvbox",
+        "nightfox",
+        "kanagawa",
+        "everforest",
+        "dracula",
+        "monokai",
+        "sonokai",
+        "rose-pine",
+      },
+      livePreview = true,
     })
   end,
 }

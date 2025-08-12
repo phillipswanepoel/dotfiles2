@@ -26,29 +26,37 @@ bind \e\[H beginning-of-line
 bind \e\[4~ end-of-line
 bind \e\[F end-of-line
 
-# GTK stuff for pavucontrol
+# WAYLAND x ELECTRON STUFF
 set -Ux GDK_BACKEND wayland
 set -Ux QT_QPA_PLATFORM wayland
 set -Ux XDG_CURRENT_DESKTOP sway
 set -Ux MOZ_ENABLE_WAYLAND 1
-# Wayland and electron
 set -Ux ELECTRON_OZONE_PLATFORM_HINT wayland
 
 # STMweb dev
 set -Ux STMWEB_DIR /home/phillips/Busii/stmweb/stmweb_python_2/
 set -Ux STMWEB_PORT 8080
 
+# GTK
+set -Ux GTK_THEME Arc-Dark
 
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-#test -r '/home/phillips/.opam/opam-init/init.fish' && source '/home/phillips/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
-test -r '/home/phillips/.opam/opam-init/init.fish'; and source '/home/phillips/.opam/opam-init/init.fish' >/dev/null 2>/dev/null
-# END opam configuration
+# Set PYENV_ROOT
+set -Ux PYENV_ROOT $HOME/.pyenv
+
+# Add pyenv to PATH
+fish_add_path $PYENV_ROOT/bin
+
+# Initialize pyenv
+status --is-interactive; and source (pyenv init --path | psub)
+status --is-interactive; and source (pyenv init - | psub)
+
+# Initialize pyenv-virtualenv
+status --is-interactive; and source (pyenv virtualenv-init - | psub)
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/phillips/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/home/phillips/Downloads/google-cloud-sdk/path.fish.inc'; end
+# if [ -f '/home/phillips/Downloads/google-cloud-sdk/path.fish.inc' ]
+#     . '/home/phillips/Downloads/google-cloud-sdk/path.fish.inc'
+# end
 
-
+# Direnv hook
+direnv hook fish | source

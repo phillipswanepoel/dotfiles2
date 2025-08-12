@@ -1,6 +1,7 @@
 {
     "position": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["custom/thunar", "custom/pipe1", "custom/steam"],
     "modules-right": ["pulseaudio", "custom/pipe1", 
                       "bluetooth", "custom/pipe1", 
                       "battery", "custom/pipe1", 
@@ -71,6 +72,19 @@
     "custom/pipe1": {
         "format": "|",
         "tooltip": false
+    },
+    "custom/thunar": {
+        "format": "    ",                 // you can use a Unicode icon or text like "Files"
+        "tooltip": "Open Thunar",
+        "on-click": "thunar",
+        "interval": 3600              // this module doesn't need updates, so set it high
+    },
+    "custom/steam": {
+        "format": "    ",
+        "tooltip": "Launch Steam",
+        "on-click": "steam",
+        "interval": 3600
     }
+    
 }
 

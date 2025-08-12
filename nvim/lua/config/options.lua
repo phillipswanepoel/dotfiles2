@@ -21,6 +21,9 @@ vim.opt.matchpairs:remove("(:),[:]")
 --vim.o.guifont = "Source Code Pro:h13"
 vim.o.guifont = "FiraCode Nerd Font:h13"
 
+--neovide
+vim.g.neovide_cursor_animate_in_insert_mode = false
+
 -- font config examples
 -- Hack:h14:i:#e-subpixelantialias:#h-
 

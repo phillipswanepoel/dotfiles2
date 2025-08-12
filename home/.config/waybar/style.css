@@ -9,13 +9,13 @@
 * {
     border: none;
     font-family: "Font Awesome", "Monospace", sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     color: @fg;
     border-radius: 0px;
 }
 
 window {
-	/*font-weight: bold;*/
+	/* font-weight: bold; */
 }
 window#waybar {
     background: @bg;

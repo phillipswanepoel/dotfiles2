@@ -54,3 +54,10 @@ autocmd("FileType", {
 })
 
 require("config.fonts")
+
+autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+})

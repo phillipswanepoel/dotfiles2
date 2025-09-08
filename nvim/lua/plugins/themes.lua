@@ -1,14 +1,28 @@
 return {
   { "folke/tokyonight.nvim", name = "tokyonight" },
   { "catppuccin/nvim", name = "catppuccin" },
-  { "ellisonleao/gruvbox.nvim", name = "gruvbox" },
   { "EdenEast/nightfox.nvim", name = "nightfox" },
-  { "sainnhe/everforest", name = "everforest" },
   { "Mofiqul/dracula.nvim", name = "dracula" },
   { "loctvl842/monokai-pro.nvim", name = "monokai-pro" },
-  { "sainnhe/sonokai", name = "sonokai" },
   { "rose-pine/neovim", name = "rose-pine" },
-  { "olimorris/onedarkpro.nvim", name = "onedark" },
+  { "xero/miasma.nvim", name = "miasma" },
+  { "sainnhe/gruvbox-material", name = "gruvbox-material" },
+  { "qaptoR-nvim/chocolatier.nvim", name = "chocolatier" },
+  { "sainnhe/sonokai", name = "sonokai" },
+  -- { "olimorris/onedarkpro.nvim", name = "onedark" },
+  {
+    "olimorris/onedarkpro.nvim",
+    opts = {
+      highlights = {
+        -- Tree-sitter variable
+        ["@variable"] = { fg = "#abb2bf" },
+        -- For non-treesitter highlighting
+        Identifier = { fg = "#abb2bf" },
+      },
+    },
+  },
+  { "sainnhe/everforest", name = "everforest" },
+  { "ellisonleao/gruvbox.nvim", name = "gruvbox" },
 
   -- Configure LazyVim to load onedark
   {

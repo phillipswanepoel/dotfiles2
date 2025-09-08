@@ -330,5 +330,49 @@ exec_always poweralertd
 # Screenshot
 bindsym Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +'%Y%m%d-%H%M%S').png
 
+# --- SwayFX blur settings ---
+# Enable blur globally
+blur enable
+
+# How strong the blur is
+blur_radius 3
+blur_passes 3
+blur_noise 0
+blur_brightness 1
+blur_contrast 2
+blur_saturation 1
+
+# Floating windows blur based on bg
+blur_xray disable
+
+# Shadows
+shadows disable
+
+# Corners
+corner_radius 8
+
+#layer_effects "waybar" {
+#    blur enable;
+#    blur_xray enable;
+#    blur_ignore_transparent enable;
+#    shadows enable;
+#    corner_radius 20;
+#}
+
+# Dunst transparency
+for_window [app_id="dunst"] opacity 0.8
+layer_effects "dunst" {
+blur enable;
+blur_xray enable;
+blur_ignore_transparent enable;
+shadows enable
+}
+
+layer_effects "wofi" {
+blur enable;
+blur_xray enable;
+blur_ignore_transparent enable;
+shadows enable
+}
 
 include /etc/sway/config.d/*

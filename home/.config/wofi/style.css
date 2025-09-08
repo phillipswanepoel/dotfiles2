@@ -1,10 +1,10 @@
 @define-color bg rgba(40, 44, 52, 0.7);
 @define-color fg rgba(171, 178, 191, 1.0);
-@define-color blue rgba(97, 175, 239, 0.7);
-@define-color magenta rgba(198, 120, 221, 0.7);
-@define-color cyan rgba(86, 182, 194, 0.7);
-@define-color red rgba(224, 108, 117, 0.7);
-@define-color black rgba(0, 0, 0, 0.5);
+@define-color blue rgba(97, 175, 239, 1.0);
+@define-color magenta rgba(198, 120, 221, 1.0);
+@define-color cyan rgba(86, 182, 194, 1.0);
+@define-color red rgba(224, 108, 117, 1.0);
+@define-color black rgba(0, 0, 0, 0.75);
 
 window {
     font-size: 15px;

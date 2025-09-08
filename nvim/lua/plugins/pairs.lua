@@ -1,21 +1,12 @@
 return {
-  {
-    "echasnovski/mini.pairs",
-    enabled = true,
-    opts = {
-      mappings = {},
-    },
-  },
-  {
-    "altermo/ultimate-autopair.nvim",
-    event = { "InsertEnter", "CmdlineEnter" },
-    branch = "v0.6", --recommended as each new version will have breaking changes
-    opts = {
-      --Config goes here
-      config_internal_pairs = {
-        { "(", ")", imap = false, disable_end = true },
-        { "[", "]", imap = false, disable_end = true },
-      },
-    },
-  },
+  "echasnovski/mini.pairs",
+  config = function(_, opts)
+    -- First, run the default setup for mini.pairs with its options
+    require("mini.pairs").setup(opts)
+
+    -- After the default setup, we override the keymaps for '(' and '['
+    -- This simply maps the key to insert the character itself, bypassing the auto-pair.
+    vim.keymap.set("i", "(", "(", { remap = true })
+    vim.keymap.set("i", "[", "[", { remap = true })
+  end,
 }

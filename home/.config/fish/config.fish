@@ -15,9 +15,6 @@ fish_add_path -U "$HOME/.local/bin"
 set -Ux fish_user_paths $fish_user_paths ~/.local/bin
 set -Ux fish_user_paths $HOME/go/bin $fish_user_paths
 
-# Set environment variables using set -x
-set -x FZF_DEFAULT_OPTS "--bind 'enter:become(vim {})'"
-
 # Map Home key to beginning of line
 bind \e\[1~ beginning-of-line
 bind \e\[H beginning-of-line
@@ -60,3 +57,12 @@ status --is-interactive; and source (pyenv virtualenv-init - | psub)
 
 # Direnv hook
 direnv hook fish | source
+
+# Cd aliases
+alias evo="cd ~/Games/Godot/Projects/EvoBattler"
+function revo
+    cd ~/Games/Godot/Dist_Linux || return
+    ./EvoBattler.x86_64
+end
+
+alias kf="ps aux | fzf | awk '{print $2}' | xargs kill -9"

@@ -31,7 +31,7 @@ set -Ux MOZ_ENABLE_WAYLAND 1
 set -Ux ELECTRON_OZONE_PLATFORM_HINT wayland
 
 # STMweb dev
-set -Ux STMWEB_DIR /home/phillips/Busii/stmweb/stmweb_python_2/
+set -Ux STMWEB_DIR $HOME/Busii/stmweb/stmweb_python_2/
 set -Ux STMWEB_PORT 8080
 
 # GTK
@@ -51,8 +51,8 @@ status --is-interactive; and source (pyenv init - | psub)
 status --is-interactive; and source (pyenv virtualenv-init - | psub)
 
 # The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/home/phillips/Downloads/google-cloud-sdk/path.fish.inc' ]
-#     . '/home/phillips/Downloads/google-cloud-sdk/path.fish.inc'
+# if [ -f '$HOME/Downloads/google-cloud-sdk/path.fish.inc' ]
+#     . '$HOME/Downloads/google-cloud-sdk/path.fish.inc'
 # end
 
 # Direnv hook

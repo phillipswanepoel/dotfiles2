@@ -1,3 +1,4 @@
+// IMPORTANT: Replace all instances of "<YOUR_HOME_DIRECTORY>" with your actual home directory path.
 {
     "editor.tokenColorCustomizations": {
         "[One Dark Pro]": { // Adjust this to match your theme name
@@ -23,8 +24,8 @@
         "--ignore=F401,E721,W503,E203",
     ],
     "editor.inlineSuggest.enabled": true,
-    "godot_tools.editor_path": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
-    "godot_tools.scene_file_config": "/home/phillips/Godot4/Projects/Turret-Defense/Scripts&Scenes/BattleEncounters/Level.tscn",
+    "godot_tools.editor_path": ""<YOUR_HOME_DIRECTORY>/Godot4/Godot_v4.0.1-stable_linux.x86_64",
+    "godot_tools.scene_file_config": ""<YOUR_HOME_DIRECTORY>/Godot4/Projects/Turret-Defense/Scripts&Scenes/BattleEncounters/Level.tscn",
     "editor.guides.highlightActiveIndentation": false,
     "godot_tools.gdscript_lsp_server_port": 6005,
     "git.enableSmartCommit": true,
@@ -32,8 +33,8 @@
     "workbench.colorTheme": "One Dark Pro",
     "vim.vimrc.enable": true,
     "extensions.ignoreRecommendations": true,
-    "godotTools.editorPath.godot4": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
-    "godotTools.editorPath.godot3": "/home/phillips/Godot4/Godot_v4.0.1-stable_linux.x86_64",
+    "godotTools.editorPath.godot4": ""<YOUR_HOME_DIRECTORY>/Godot4/Godot_v4.0.1-stable_linux.x86_64",
+    "godotTools.editorPath.godot3": ""<YOUR_HOME_DIRECTORY>/Godot4/Godot_v4.0.1-stable_linux.x86_64",
     "godotTools.lsp.serverPort": 6005,
     "vim.smartRelativeLine": true,
     "editor.lineNumbers": "relative",

@@ -35,25 +35,25 @@ button:hover {
 }
 
 #lock {
-    background-image: image(url("~/Pictures/icons/wlogout/lock.svg"));
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/lock.svg"));
 }
 
 #logout {
-    background-image: image(url("~/Pictures/icons/wlogout/logout.svg"));
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/logout.svg"));
 }
 
 #suspend {
-    background-image: image(url("~/Pictures/icons/wlogout/moon.svg"));
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/moon.svg"));
 }
 
 #hibernate {
-    background-image: image(url("~/Pictures/icons/wlogout/moon+.svg"));
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/moon+.svg"));
 }
 
 #shutdown{
-    background-image: image(url("~/Pictures/icons/wlogout/power.svg"));
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/power.svg"));
 }
 
 #reboot{
-    background-image: image(url("~/Pictures/icons/wlogout/restart.svg"));
+    background-image: image(url("/home/phillips/Pictures/icons/wlogout/restart.svg"));
 }

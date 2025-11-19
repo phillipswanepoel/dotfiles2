@@ -259,7 +259,7 @@ workspace 9 output eDP-1
 
 assign [app_id="firefox"] workspace 1
 # assign [app_id="code-oss"] workspace 2
-assign [class="steam"] workspace 3
+assign [class="steam"] workspace 2
 assign [class="vesktop"] workspace 6
 assign [class="EvoBattler"] workspace 4
 
@@ -349,7 +349,7 @@ blur_xray disable
 shadows disable
 
 # Corners
-corner_radius 8
+#corner_radius 8
 
 #layer_effects "waybar" {
 #    blur enable;
@@ -374,5 +374,10 @@ blur_xray enable;
 blur_ignore_transparent enable;
 shadows enable
 }
+
+# Env exports
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd XDG_DESKTOP_PORTAL=$xdg_desktop_portal
 
 include /etc/sway/config.d/*
